@@ -1,7 +1,6 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Background from "../components/Background";
 import Container from "../components/Container";
 import { Store } from "../utils/Store";
@@ -11,6 +10,10 @@ const Cart = () => {
   const {
     cart: { cartItems },
   } = state;
+
+  useEffect(() => {
+    document.title = "Carrito - E-commerce";
+  });
 
   const removeCart = (item) => {
     dispatch({ type: "CART_REMOVE_ITEM", payload: item });
@@ -23,9 +26,6 @@ const Cart = () => {
 
   return (
     <>
-      <Head>
-        <title>Carrito - E-commerce</title>
-      </Head>
       <Background>
         <Container>
           <div className="flex flex-col items-center my-5">

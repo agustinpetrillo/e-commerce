@@ -7,7 +7,6 @@ import { BiShoppingBag } from "react-icons/bi";
 import { useContext, useEffect, useState } from "react";
 import { Store } from "../../utils/Store";
 import axios from "axios";
-import Head from "next/head";
 import Link from "next/link";
 
 const ProductScreen = () => {
@@ -24,6 +23,7 @@ const ProductScreen = () => {
       .get("https://api.bluelytics.com.ar/v2/latest")
       .then((res) => setDolar(res.data))
       .catch((err) => console.log(err));
+    document.title = `${product.name} - E-Commerce`;
   });
 
   if (!product) {
@@ -68,9 +68,6 @@ const ProductScreen = () => {
 
   return (
     <>
-      <Head>
-        <title>{product.name} - E-Commerce</title>
-      </Head>
       <Background>
         <Container className="flex flex-col items-center justify-center">
           <div className="flex w-full justify-center items-center mt-10">
