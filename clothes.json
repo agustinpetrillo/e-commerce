@@ -1,0 +1,254 @@
+[
+  {
+    "id": 0,
+    "image": "/clothes/op68.jpg",
+    "name": "Trapstar",
+    "slug": "Trapstar",
+    "category": "buzos",
+    "price": 11900,
+    "stock": 12
+  },
+  {
+    "id": 1,
+    "image": "/clothes/op69.jpg",
+    "name": "Amour Noir",
+    "slug": "Amour Noir",
+    "category": "camperas",
+    "price": 24800,
+    "stock": 12
+  },
+  {
+    "id": 2,
+    "image": "/clothes/op70.jpg",
+    "name": "Lafayette",
+    "slug": "Lafayette",
+    "category": "remeras",
+    "price": 12660,
+    "stock": 12
+  },
+  {
+    "id": 3,
+    "image": "/clothes/op68.jpg",
+    "name": "Fuleteo",
+    "slug": "Fuleteo",
+    "category": "buzos",
+    "price": 7300,
+    "stock": 12
+  },
+  {
+    "id": 4,
+    "image": "/clothes/op69.jpg",
+    "name": "Campera",
+    "slug": "Campera",
+    "category": "camperas",
+    "price": 80000,
+    "stock": 12
+  },
+  {
+    "id": 5,
+    "image": "/clothes/op70.jpg",
+    "name": "Remera",
+    "slug": "Remera",
+    "category": "remeras",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 6,
+    "image": "/clothes/op68.jpg",
+    "name": "Buzo",
+    "slug": "Buzo",
+    "category": "buzos",
+    "price": 30000,
+    "stock": 12
+  },
+  {
+    "id": 7,
+    "image": "/clothes/op69.jpg",
+    "name": "Campera",
+    "slug": "Campera",
+    "category": "camperas",
+    "price": 80000,
+    "stock": 12
+  },
+  {
+    "id": 8,
+    "image": "/clothes/op70.jpg",
+    "name": "Remera",
+    "slug": "Remera",
+    "category": "remeras",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 9,
+    "image": "/clothes/op68.jpg",
+    "name": "Buzo",
+    "slug": "Buzo",
+    "category": "buzos",
+    "price": 30000,
+    "stock": 12
+  },
+  {
+    "id": 10,
+    "image": "/clothes/op69.jpg",
+    "name": "Campera",
+    "slug": "Campera",
+    "category": "camperas",
+    "price": 80000,
+    "stock": 12
+  },
+  {
+    "id": 11,
+    "image": "/clothes/op70.jpg",
+    "name": "Remera",
+    "slug": "Remera",
+    "category": "remeras",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 12,
+    "image": "/clothes/op70.jpg",
+    "name": "Remera",
+    "slug": "Remera",
+    "category": "remeras",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 13,
+    "image": "/clothes/op68.jpg",
+    "name": "Buzo",
+    "slug": "Buzo",
+    "category": "buzos",
+    "price": 30000,
+    "stock": 12
+  },
+  {
+    "id": 14,
+    "image": "/clothes/op69.jpg",
+    "name": "Campera",
+    "slug": "Campera",
+    "category": "camperas",
+    "price": 80000,
+    "stock": 12
+  },
+  {
+    "id": 15,
+    "image": "/clothes/op70.jpg",
+    "name": "Remera",
+    "slug": "Remera",
+    "category": "remeras",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 16,
+    "image": "/clothes/op70.jpg",
+    "name": "Anillo",
+    "slug": "Anillo",
+    "category": "accesorios",
+    "price": 2000,
+    "stock": 12
+  },
+  {
+    "id": 17,
+    "image": "/clothes/op68.jpg",
+    "name": "Pulsera",
+    "slug": "Pulsera",
+    "category": "accesorios",
+    "price": 1200,
+    "stock": 12
+  },
+  {
+    "id": 18,
+    "image": "/clothes/op69.jpg",
+    "name": "Cadena",
+    "slug": "Cadena",
+    "category": "accesorios",
+    "price": 21000,
+    "stock": 12
+  },
+  {
+    "id": 19,
+    "image": "/clothes/op70.jpg",
+    "name": "Malla roja",
+    "slug": "Malla roja",
+    "category": "trajes de baño",
+    "price": 3400,
+    "stock": 12
+  },
+  {
+    "id": 20,
+    "image": "/clothes/op68.jpg",
+    "name": "Malla naranja",
+    "slug": "Malla naranja",
+    "category": "trajes de baño",
+    "price": 3400,
+    "stock": 12
+  },
+  {
+    "id": 21,
+    "image": "/clothes/op70.jpg",
+    "name": "Remera",
+    "slug": "Remera",
+    "category": "remeras",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 22,
+    "image": "/clothes/op69.jpg",
+    "name": "Anillo",
+    "slug": "Anillo",
+    "category": "accesorios",
+    "price": 9400,
+    "stock": 12
+  },
+  {
+    "id": 23,
+    "image": "/clothes/op70.jpg",
+    "name": "Malla violeta",
+    "slug": "Malla violeta",
+    "category": "trajes de baño",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 24,
+    "image": "/clothes/op68.jpg",
+    "name": "Remera",
+    "slug": "Remera",
+    "category": "remeras",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 25,
+    "image": "/clothes/op69.jpg",
+    "name": "Buzo",
+    "slug": "Buzo",
+    "category": "buzos",
+    "price": 5000,
+    "stock": 12
+  },
+  {
+    "id": 26,
+    "image": "/clothes/op70.jpg",
+    "name": "Campera",
+    "slug": "Campera",
+    "category": "camperas",
+    "price": 14000,
+    "stock": 12
+  },
+  {
+    "id": 27,
+    "image": "/clothes/op68.jpg",
+    "name": "Pulsera",
+    "slug": "Pulsera",
+    "category": "accesorios",
+    "price": 5800,
+    "stock": 12
+  }
+]
