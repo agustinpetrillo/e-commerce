@@ -69,16 +69,18 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-center my-6 md:my-0">
             <div className="flex gap-4 mb-5">
               <a
-                href="/"
+                href="https://www.instagram.com"
                 className="hover:scale-125 duration-200 transition-all"
                 rel="noreferrer"
+                target="_blank"
               >
                 <AiOutlineInstagram size={32} />
               </a>
               <a
-                href="/"
+                href="https://www.discord.com"
                 className="hover:scale-125 duration-200 transition-all"
                 rel="noreferrer"
+                target="_blank"
               >
                 <BsDiscord size={32} />
               </a>
