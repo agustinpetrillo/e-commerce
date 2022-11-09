@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "image": "/clothes/op68.jpg",
+    "image": "/clothes/trapstar.png",
     "name": "Trapstar",
     "slug": "Trapstar",
     "category": "buzos",
@@ -10,7 +10,7 @@
   },
   {
     "id": 1,
-    "image": "/clothes/op69.jpg",
+    "image": "/clothes/amour-noir.png",
     "name": "Amour Noir",
     "slug": "Amour Noir",
     "category": "camperas",
@@ -19,7 +19,7 @@
   },
   {
     "id": 2,
-    "image": "/clothes/op70.jpg",
+    "image": "/clothes/lafayette.png",
     "name": "Lafayette",
     "slug": "Lafayette",
     "category": "remeras",
@@ -28,7 +28,7 @@
   },
   {
     "id": 3,
-    "image": "/clothes/op68.jpg",
+    "image": "/clothes/fuleteo.png",
     "name": "Fuleteo",
     "slug": "Fuleteo",
     "category": "buzos",
