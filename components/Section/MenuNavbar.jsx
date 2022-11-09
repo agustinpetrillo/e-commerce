@@ -28,7 +28,7 @@ const MenuNavbar = () => {
         className={
           nav
             ? "hidden"
-            : "flex min-h-screen w-full top-0 left-0 z-40 absolute bg-black"
+            : "flex min-h-screen w-full top-0 left-0 z-40 absolute bg-all"
         }
       >
         <Container>
