@@ -7,14 +7,12 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Store } from "../../utils/Store";
-import axios from "axios";
 
 const MainSection = () => {
   const [search, setSearch] = useState("");
   const [visible, setVisible] = useState(16);
   const [data, setData] = useState([]);
-  const [dolar, setDolar] = useState([]);
-  const { priceTo } = useContext(Store);
+  const { priceTo, dolar } = useContext(Store);
 
   const router = useRouter();
 
@@ -25,11 +23,6 @@ const MainSection = () => {
 
   useEffect(() => {
     // API to control usd price
-    axios
-      .get("https://api.bluelytics.com.ar/v2/latest")
-      .then((res) => setDolar(res.data))
-      .catch((err) => console.log(err));
-
     if (data.length === 0) {
       setData(Clothes);
     }

@@ -1,4 +1,5 @@
-import { useReducer, createContext, useState } from "react";
+import axios from "axios";
+import { useReducer, createContext, useState, useEffect } from "react";
 
 export const Store = createContext();
 
@@ -33,6 +34,13 @@ export const StoreProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const [priceTo, setPriceTo] = useState(true);
     //true is ARGS, false is USD
-    const value = { state, dispatch, priceTo, setPriceTo }
+    const [dolar, setDolar] = useState([]);
+    useEffect(() => {
+        axios
+            .get("https://api.bluelytics.com.ar/v2/latest")
+            .then((res) => setDolar(res.data))
+            .catch((err) => console.log(err));
+    })
+    const value = { state, dispatch, priceTo, setPriceTo, dolar, setDolar }
     return <Store.Provider value={value}>{children}</Store.Provider>
 }

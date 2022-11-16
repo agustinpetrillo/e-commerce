@@ -6,12 +6,10 @@ import Image from "next/image";
 import { BiShoppingBag } from "react-icons/bi";
 import { useContext, useEffect, useState } from "react";
 import { Store } from "../../utils/Store";
-import axios from "axios";
 import Link from "next/link";
 
 const ProductScreen = () => {
-  const { state, dispatch, priceTo } = useContext(Store);
-  const [dolar, setDolar] = useState([]);
+  const { state, dispatch, priceTo, dolar } = useContext(Store);
   const [size, setSize] = useState(null);
   const router = useRouter();
   const { slug } = router.query;
@@ -19,10 +17,6 @@ const ProductScreen = () => {
   const product = Clothes.find((i) => i.slug === slug);
 
   useEffect(() => {
-    axios
-      .get("https://api.bluelytics.com.ar/v2/latest")
-      .then((res) => setDolar(res.data))
-      .catch((err) => console.log(err));
     document.title = `${product.name} - E-Commerce`;
   });
 
