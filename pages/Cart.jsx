@@ -26,7 +26,7 @@ const Cart = () => {
 
   return (
     <>
-      <Background>
+      <Background className="2xl:min-h-screen mb-36 md:mb-0">
         <Container>
           <div className="flex flex-col items-center my-5">
             <h1 className="mb-5">Carrito de compras</h1>

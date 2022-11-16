@@ -64,17 +64,19 @@ const ProductScreen = () => {
     <>
       <Background>
         <Container className="flex flex-col items-center justify-center">
-          <div className="flex w-full justify-center items-center mt-10">
-            <Image
-              src={product.image}
-              alt="/"
-              height="420"
-              width="340"
-              objectFit="cover"
-              objectPosition="center"
-              className="rounded-md"
-            />
-            <div className="flex flex-col ml-20">
+          <div className="flex flex-col md:flex-row w-full justify-center items-center mt-10">
+            <div className="flex mb-6 md:mb-0">
+              <Image
+                src={product.image}
+                alt="/"
+                height="420"
+                width="340"
+                objectFit="cover"
+                objectPosition="center"
+                className="rounded-md"
+              />
+            </div>
+            <div className="flex flex-col md:ml-20">
               <p className="uppercase my-1 text-gray-300 text-xs">
                 {product.stock > 0 ? "en stock" : "sin stock"}
               </p>
