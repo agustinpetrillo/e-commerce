@@ -17,8 +17,9 @@ const ProductScreen = () => {
   const product = Clothes.find((i) => i.slug === slug);
 
   useEffect(() => {
-    document.title = `${product.name} - E-Commerce`;
-  });
+    // document.title = `${product.name} - E-Commerce`;
+    document.title = "E-Commerce";
+  }, []);
 
   if (!product) {
     return (
@@ -78,7 +79,7 @@ const ProductScreen = () => {
             </div>
             <div className="flex flex-col md:ml-20">
               <p className="uppercase my-1 text-gray-300 text-xs">
-                {product.stock > 0 ? "en stock" : "sin stock"}
+                {product.stock === 0 ? "sin stock" : "en stock"}
               </p>
               <p className="text-2xl uppercase mb-6">{product.name}</p>
               <p className="text-sm mb-1">Talle: {size}</p>
