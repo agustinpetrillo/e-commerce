@@ -31,17 +31,17 @@ const Cart = () => {
           <div className="flex flex-col items-center my-5">
             <h1 className="mb-5">Carrito de compras</h1>
             {cartItems.length === 0 ? (
-              <div className="mt-10 flex flex-col items-center max-w-xs">
+              <div className="flex flex-col items-center max-w-xs mt-10">
                 <p>El carrito esta vacio :(</p>
                 <Link href="/">
-                  <button className="mt-2 w-full rounded-2xl bg-white text-black p-3 hover:scale-105 duration-200 transition-all">
+                  <button className="w-full p-3 mt-2 text-black transition-all duration-200 bg-white rounded-2xl hover:scale-105">
                     Tienda
                   </button>
                 </Link>
               </div>
             ) : (
               <div className="flex flex-col items-center">
-                <div className="gap-5 grid grid-cols-4">
+                <div className="grid grid-cols-4 gap-5">
                   {cartItems.map((item) => (
                     <div className="flex flex-col items-center" key={item.id}>
                       <Image
@@ -55,20 +55,20 @@ const Cart = () => {
                       />
                       <p className="my-1 text-xs">
                         Producto:{" "}
-                        <span className="text-lg ml-1">{item.name}</span>
+                        <span className="ml-1 text-lg">{item.name}</span>
                       </p>
                       <p className="text-xs">
                         Precio:{" "}
-                        <span className="text-lg ml-1">
+                        <span className="ml-1 text-lg">
                           ${item.price * item.quantity} ARS
                         </span>
                       </p>
-                      <div className="flex mt-2 gap-2">
+                      <div className="flex gap-2 mt-2">
                         <p className="text-xs">Cantidad:</p>
                         <select
                           value={item.quantity}
                           onChange={(e) => updateCart(item, e.target.value)}
-                          className="text-black text-sm rounded-sm outline-none ml-1"
+                          className="ml-1 text-sm text-black rounded-sm outline-none"
                         >
                           {[...Array(item.stock).keys()].map((i) => (
                             <option key={i + 1} value={i + 1}>
@@ -78,7 +78,7 @@ const Cart = () => {
                         </select>
                       </div>
                       <button
-                        className="mt-5 bg-white text-black rounded-lg p-3 hover:scale-105 transition-all duration-200"
+                        className="p-3 mt-5 text-black transition-all duration-200 bg-white rounded-lg hover:scale-105"
                         onClick={() => removeCart(item)}
                       >
                         Quitar
@@ -86,20 +86,20 @@ const Cart = () => {
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-col my-10 max-w-xs">
+                <div className="flex flex-col max-w-xs my-10">
                   <p className="text-sm">
                     Cantidad total:
-                    <span className="text-xl ml-1">
+                    <span className="ml-1 text-xl">
                       {cartItems.reduce((a, c) => a + c.quantity, 0)}
                     </span>
                   </p>
                   <p className="text-sm">
                     Precio total:
-                    <span className="text-xl ml-1">
+                    <span className="ml-1 text-xl">
                       ${cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
                     </span>
                   </p>
-                  <button className="mt-2 bg-white text-black rounded-lg p-3 hover:scale-105 transition-all duration-200">
+                  <button className="p-3 mt-2 text-black transition-all duration-200 bg-white rounded-lg hover:scale-105">
                     PAGAR
                   </button>
                 </div>

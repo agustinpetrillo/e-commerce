@@ -11,16 +11,16 @@ const MenuNavbar = () => {
   const { setPriceTo } = useContext(Store);
   return (
     <>
-      <div className="hidden md:block z-50" onClick={() => setNav(!nav)}>
+      <div className="z-50 hidden md:block" onClick={() => setNav(!nav)}>
         {nav ? (
           <AiOutlineMenu
             size={27}
-            className="cursor-pointer hover:text-gray-300 duration-100"
+            className="duration-100 cursor-pointer hover:text-gray-300"
           />
         ) : (
           <AiOutlineClose
             size={27}
-            className="cursor-pointer hover:text-gray-300 duration-100"
+            className="duration-100 cursor-pointer hover:text-gray-300"
           />
         )}
       </div>
@@ -33,54 +33,54 @@ const MenuNavbar = () => {
       >
         <Container>
           <div className="flex flex-col items-center justify-center">
-            <ul className="flex gap-4 border p-4 rounded-xl my-5">
+            <ul className="flex gap-4 p-4 my-5 border rounded-xl">
               <li
-                className="hover:text-teal-300 duration-300 font-bold"
+                className="font-bold duration-300 hover:text-teal-300"
                 key={0}
                 onClick={() => setPriceTo(true)}
               >
                 ARS
               </li>
               <li
-                className="hover:text-green-600 duration-300 font-bold"
+                className="font-bold duration-300 hover:text-green-600"
                 key={1}
                 onClick={() => setPriceTo(false)}
               >
                 USD
               </li>
             </ul>
-            <ul className="text-center text-2xl">
-              <li className="my-5 hover:scale-125 duration-300" key={0}>
+            <ul className="text-2xl text-center">
+              <li className="my-5 duration-300 hover:scale-125" key={0}>
                 Inicio
               </li>
-              <li className="my-5 hover:scale-125 duration-300" key={1}>
+              <li className="my-5 duration-300 hover:scale-125" key={1}>
                 Productos
               </li>
-              <li className="my-5 hover:scale-125 duration-300" key={2}>
+              <li className="my-5 duration-300 hover:scale-125" key={2}>
                 Contactos
               </li>
-              <li className="my-5 hover:scale-125 duration-300" key={3}>
+              <li className="my-5 duration-300 hover:scale-125" key={3}>
                 Devoluciones
               </li>
-              <li className="my-5 hover:scale-125 duration-300" key={4}>
+              <li className="my-5 duration-300 hover:scale-125" key={4}>
                 Envíos
               </li>
             </ul>
             <a href="#" className="my-5">
               <BsInstagram
                 size={27}
-                className="hover:text-gray-300 duration-300 hover:scale-125"
+                className="duration-300 hover:text-gray-300 hover:scale-125"
               />
             </a>
             <Link href="/">
               <h1 className="my-5 cursor-pointer">E-COMMERCE</h1>
             </Link>
             <div className="flex gap-2">
-              <p className="cursor-pointer hover:text-gray-300 duration-100">
+              <p className="duration-100 cursor-pointer hover:text-gray-300">
                 Crear cuenta
               </p>
               <p>|</p>
-              <p className="cursor-pointer hover:text-gray-300 duration-100">
+              <p className="duration-100 cursor-pointer hover:text-gray-300">
                 Iniciar sesión
               </p>
             </div>

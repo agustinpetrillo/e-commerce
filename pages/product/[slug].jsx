@@ -4,9 +4,10 @@ import Clothes from "../../clothes";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { BiShoppingBag } from "react-icons/bi";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Store } from "../../utils/Store";
 import Link from "next/link";
+import Head from "next/head";
 
 const ProductScreen = () => {
   const { state, dispatch, priceTo, dolar } = useContext(Store);
@@ -16,16 +17,11 @@ const ProductScreen = () => {
 
   const product = Clothes.find((i) => i.slug === slug);
 
-  useEffect(() => {
-    // document.title = `${product.name} - E-Commerce`;
-    document.title = "E-Commerce";
-  }, []);
-
   if (!product) {
     return (
       <Background>
         <Container className="flex items-center justify-center">
-          <h2 className="text-white text-3xl mt-10">
+          <h2 className="mt-10 text-3xl text-white">
             Producto no encontrado :(
           </h2>
         </Container>
@@ -63,9 +59,12 @@ const ProductScreen = () => {
 
   return (
     <>
+      <Head>
+        <title>{`${product.name} - E-Commerce`}</title>
+      </Head>
       <Background>
         <Container className="flex flex-col items-center justify-center">
-          <div className="flex flex-col md:flex-row w-full justify-center items-center mt-10">
+          <div className="flex flex-col items-center justify-center w-full mt-10 md:flex-row">
             <div className="flex mb-6 md:mb-0">
               <Image
                 src={product.image}
@@ -78,44 +77,44 @@ const ProductScreen = () => {
               />
             </div>
             <div className="flex flex-col md:ml-20">
-              <p className="uppercase my-1 text-gray-300 text-xs">
+              <p className="my-1 text-xs text-gray-300 uppercase">
                 {product.stock === 0 ? "sin stock" : "en stock"}
               </p>
-              <p className="text-2xl uppercase mb-6">{product.name}</p>
-              <p className="text-sm mb-1">Talle: {size}</p>
-              <div className="flex gap-1 text-gray-600 mb-5">
+              <p className="mb-6 text-2xl uppercase">{product.name}</p>
+              <p className="mb-1 text-sm">Talle: {size}</p>
+              <div className="flex gap-1 mb-5 text-gray-600">
                 <button
-                  className="bg-white rounded p-3 uppercase tracking-tighter border-2 focus:border-orange-600"
+                  className="p-3 tracking-tighter uppercase bg-white border-2 rounded focus:border-orange-600"
                   onClick={() => setSize("XS")}
                 >
                   XS
                 </button>
                 <button
-                  className="bg-white rounded p-3 uppercase tracking-tighter border-2 focus:border-orange-600"
+                  className="p-3 tracking-tighter uppercase bg-white border-2 rounded focus:border-orange-600"
                   onClick={() => setSize("S")}
                 >
                   S
                 </button>
                 <button
-                  className="bg-white rounded p-3 uppercase tracking-tighter border-2 focus:border-orange-600"
+                  className="p-3 tracking-tighter uppercase bg-white border-2 rounded focus:border-orange-600"
                   onClick={() => setSize("M")}
                 >
                   M
                 </button>
                 <button
-                  className="bg-white rounded p-3 uppercase tracking-tighter border-2 focus:border-orange-600"
+                  className="p-3 tracking-tighter uppercase bg-white border-2 rounded focus:border-orange-600"
                   onClick={() => setSize("L")}
                 >
                   L
                 </button>
                 <button
-                  className="bg-white rounded p-3 uppercase tracking-tighter border-2 focus:border-orange-600"
+                  className="p-3 tracking-tighter uppercase bg-white border-2 rounded focus:border-orange-600"
                   onClick={() => setSize("XL")}
                 >
                   XL
                 </button>
                 <button
-                  className="bg-white rounded p-3 uppercase tracking-tighter border-2 focus:border-orange-600"
+                  className="p-3 tracking-tighter uppercase bg-white border-2 rounded focus:border-orange-600"
                   onClick={() => setSize("XXL")}
                 >
                   XXL
@@ -124,14 +123,14 @@ const ProductScreen = () => {
               <p className="mb-8">
                 {priceTo ? (
                   <div className="flex items-center">
-                    <p className="text-xs mr-2">Valor final:</p>
+                    <p className="mr-2 text-xs">Valor final:</p>
                     <p className="text-2xl font-bold">
                       {product.price.toLocaleString("de-DE")} ARS
                     </p>
                   </div>
                 ) : (
                   <div className="flex items-center">
-                    <p className="text-xs mr-2">Valor final:</p>
+                    <p className="mr-2 text-xs">Valor final:</p>
                     <p className="text-2xl font-bold">
                       {(product.price / dolar.blue.value_sell).toFixed(2)} USD
                     </p>
@@ -139,7 +138,7 @@ const ProductScreen = () => {
                 )}
               </p>
               <button
-                className="mb-3 rounded-2xl bg-white text-black p-3 hover:scale-105 duration-200 transition-all"
+                className="p-3 mb-3 text-black transition-all duration-200 bg-white rounded-2xl hover:scale-105"
                 onClick={addToCart}
               >
                 Añadir al carrito
@@ -148,7 +147,7 @@ const ProductScreen = () => {
                 </div>
               </button>
               <button
-                className="mt-5 rounded-xl bg-white text-black p-2 hover:scale-105 duration-200 transition-all"
+                className="p-2 mt-5 text-black transition-all duration-200 bg-white rounded-xl hover:scale-105"
                 onClick={() => router.push("/")}
               >
                 Volver a la tienda
@@ -156,7 +155,7 @@ const ProductScreen = () => {
             </div>
           </div>
           <div className="flex flex-col mt-28">
-            <p className="uppercase mb-3">Mas vendidos</p>
+            <p className="mb-3 uppercase">Mas vendidos</p>
             <div className="flex items-center justify-center gap-5 mb-16">
               {Clothes.slice(0, screenWidth()).map((clothes) => (
                 <div
@@ -164,7 +163,7 @@ const ProductScreen = () => {
                   key={clothes.id}
                 >
                   <div
-                    className="flex flex-col items-center relative group cursor-pointer"
+                    className="relative flex flex-col items-center cursor-pointer group"
                     onClick={() => router.push(`/product/${clothes.slug}`)}
                   >
                     <Image
@@ -174,18 +173,18 @@ const ProductScreen = () => {
                       width="190"
                       objectFit="cover"
                       objectPosition="center"
-                      className="rounded-md hover:scale-105 duration-200 transition-all group-hover:opacity-30"
+                      className="transition-all duration-200 rounded-md hover:scale-105 group-hover:opacity-30"
                     />
-                    <div className="hidden group-hover:block flex-col absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 text-center">
+                    <div className="absolute flex-col hidden text-center group-hover:block top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4">
                       <div className="flex flex-col items-center">
-                        <p className="tracking-normal whitespace-nowrap mb-2 text-xs md:text-base">
+                        <p className="mb-2 text-xs tracking-normal whitespace-nowrap md:text-base">
                           MÁS INFORMACIÓN
                         </p>
                       </div>
                     </div>
                   </div>
                   <Link href={`/product/${clothes.slug}`}>
-                    <p className="text-sm my-2 uppercase cursor-pointer hover:text-gray-300">
+                    <p className="my-2 text-sm uppercase cursor-pointer hover:text-gray-300">
                       {clothes.name}
                     </p>
                   </Link>

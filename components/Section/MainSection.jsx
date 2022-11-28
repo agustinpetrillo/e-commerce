@@ -40,10 +40,10 @@ const MainSection = () => {
 
   return (
     <>
-      <Background className="min-h-screen w-full mt-8" id="main">
+      <Background className="w-full min-h-screen mt-8" id="main">
         <Container>
-          <div className="flex flex-col md:items-center justify-center">
-            <div className="flex mb-8 justify-center">
+          <div className="flex flex-col justify-center md:items-center">
+            <div className="flex justify-center mb-8">
               <input
                 type="text"
                 placeholder="Buscar"
@@ -52,10 +52,10 @@ const MainSection = () => {
               />
               <AiOutlineSearch
                 size={27}
-                className="cursor-pointer hover:text-gray-300 duration-100"
+                className="duration-100 cursor-pointer hover:text-gray-300"
               />
             </div>
-            <ul className="flex flex-col md:flex-row gap-6 uppercase text-sm whitespace-nowrap">
+            <ul className="flex flex-col gap-6 text-sm uppercase md:flex-row whitespace-nowrap">
               {allCategories.map((item) => (
                 <li
                   key={(prev) => prev + 1}
@@ -66,7 +66,7 @@ const MainSection = () => {
                 </li>
               ))}
             </ul>
-            <div className="grid md:grid-cols-4 2xl:grid-cols-5 grid-cols-2 my-6 gap-10">
+            <div className="grid grid-cols-2 gap-10 my-6 md:grid-cols-4 2xl:grid-cols-5">
               {data
                 .filter((item) => {
                   return search.toLowerCase() === null
@@ -80,7 +80,7 @@ const MainSection = () => {
                     key={clothes.id}
                   >
                     <div
-                      className="flex flex-col items-center relative group cursor-pointer"
+                      className="relative flex flex-col items-center cursor-pointer group"
                       onClick={() => router.push(`/product/${clothes.slug}`)}
                     >
                       <Image
@@ -90,18 +90,18 @@ const MainSection = () => {
                         width="190"
                         objectFit="cover"
                         objectPosition="center"
-                        className="rounded-md hover:scale-105 duration-200 transition-all group-hover:opacity-30"
+                        className="transition-all duration-200 rounded-md hover:scale-105 group-hover:opacity-30"
                       />
-                      <div className="hidden group-hover:block flex-col absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 text-center">
+                      <div className="absolute flex-col hidden text-center group-hover:block top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4">
                         <div className="flex flex-col items-center">
-                          <p className="tracking-normal whitespace-nowrap mb-2 text-xs md:text-base">
+                          <p className="mb-2 text-xs tracking-normal whitespace-nowrap md:text-base">
                             MÁS INFORMACIÓN
                           </p>
                         </div>
                       </div>
                     </div>
                     <Link href={`/product/${clothes.slug}`}>
-                      <p className="text-sm my-2 uppercase cursor-pointer hover:text-gray-300">
+                      <p className="my-2 text-sm uppercase cursor-pointer hover:text-gray-300">
                         {clothes.name}
                       </p>
                     </Link>

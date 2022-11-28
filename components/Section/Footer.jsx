@@ -9,32 +9,32 @@ const Footer = () => {
   return (
     <>
       <Background className="w-full min-h-0">
-        <Container className="flex flex-col justify-center py-10 px-20">
-          <div className="flex md:justify-between justify-center items-center">
+        <Container className="flex flex-col justify-center px-20 py-10">
+          <div className="flex items-center justify-center md:justify-between">
             <div className="flex-col hidden md:block">
               <ul className="text-xl">
-                <li className="my-5 hover:scale-110 duration-200" key={0}>
+                <li className="my-5 duration-200 hover:scale-110" key={0}>
                   <Link href="/">Inicio</Link>
                 </li>
-                <li className="my-5 hover:scale-110 duration-200" key={1}>
+                <li className="my-5 duration-200 hover:scale-110" key={1}>
                   Productos
                 </li>
-                <li className="my-5 hover:scale-110 duration-200" key={2}>
+                <li className="my-5 duration-200 hover:scale-110" key={2}>
                   Contactos
                 </li>
-                <li className="my-5 hover:scale-110 duration-200" key={3}>
+                <li className="my-5 duration-200 hover:scale-110" key={3}>
                   Devoluciones
                 </li>
-                <li className="my-5 hover:scale-110 duration-200" key={4}>
+                <li className="my-5 duration-200 hover:scale-110" key={4}>
                   Envíos
                 </li>
               </ul>
             </div>
             <div className="flex flex-col whitespace-nowrap">
-              <div className="my-2 flex items-center">
+              <div className="flex items-center my-2">
                 <BsBoxSeam size={35} className="mr-3" />
                 <div>
-                  <h5 className="uppercase tracking-normal">
+                  <h5 className="tracking-normal uppercase">
                     Enviamos tu compra
                   </h5>
                   <p className="text-xs tracking-tight">
@@ -42,10 +42,10 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <div className="my-2 flex items-center">
+              <div className="flex items-center my-2">
                 <BsCreditCard2Back size={35} className="mr-3" />
                 <div>
-                  <h5 className="uppercase tracking-normal">
+                  <h5 className="tracking-normal uppercase">
                     Pagá como quieras
                   </h5>
                   <p className="text-xs tracking-tight">
@@ -53,10 +53,10 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <div className="my-2 flex items-center">
+              <div className="flex items-center my-2">
                 <MdOutlineVerified size={35} className="mr-3" />
                 <div>
-                  <h5 className="uppercase tracking-normal">
+                  <h5 className="tracking-normal uppercase">
                     Comprá con seguridad
                   </h5>
                   <p className="text-xs tracking-tight">
@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="flex gap-4 mb-5">
               <a
                 href="https://www.instagram.com"
-                className="hover:scale-125 duration-200 transition-all"
+                className="transition-all duration-200 hover:scale-125"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -78,7 +78,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://www.discord.com"
-                className="hover:scale-125 duration-200 transition-all"
+                className="transition-all duration-200 hover:scale-125"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -87,7 +87,7 @@ const Footer = () => {
             </div>
             <div className="text-center whitespace-nowrap">
               <p className="my-3 text-sm">E-COMMERCE@GMAIL.COM</p>
-              <p className="tracking-tight text-xs">
+              <p className="text-xs tracking-tight">
                 Copyright - Derechos reservados
               </p>
             </div>

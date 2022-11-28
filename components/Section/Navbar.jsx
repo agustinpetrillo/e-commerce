@@ -16,17 +16,17 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="sticky top-0 min-h-0 w-full p-6 md:p-10 lg:px-52 bg-black/50 z-30 shadow-xl">
-        <div className="flex justify-between items-center">
+      <div className="sticky top-0 z-30 w-full min-h-0 p-6 shadow-xl md:p-10 lg:px-52 bg-black/50">
+        <div className="flex items-center justify-between">
           <Link href="/">
-            <h1 className="uppercase whitespace-nowrap cursor-pointer text-2xl md:text-4xl">
+            <h1 className="text-2xl uppercase cursor-pointer whitespace-nowrap md:text-4xl">
               Logo
             </h1>
           </Link>
           <div className="flex items-center gap-10">
             <select
               defaultValue={priceTo}
-              className="text-white bg-transparent outline-none cursor-pointer font-bold"
+              className="font-bold text-white bg-transparent outline-none cursor-pointer"
               onChange={() => setPriceTo(!priceTo)}
             >
               <option className="text-teal-300 bg-black" value="ARS">
@@ -40,7 +40,7 @@ const Navbar = () => {
               <Link href="/Cart">
                 <BiShoppingBag
                   size={27}
-                  className="cursor-pointer hover:text-gray-300 duration-100"
+                  className="duration-100 cursor-pointer hover:text-gray-300"
                 />
               </Link>
               <p className="text-sm">{cartItemsCount}</p>
