@@ -8,7 +8,7 @@ const MenuNavbar = dynamic(() => import("./MenuNavbar"));
 const Navbar = () => {
   const { state, priceTo, setPriceTo } = useContext(Store);
   const { cart } = state;
-  const [cartItemsCount, setCartItemsCount] = useState(0);
+  const [cartItemsCount, setCartItemsCount] = useState<number>(0);
 
   useEffect(() => {
     setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));

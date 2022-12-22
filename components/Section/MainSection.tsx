@@ -1,17 +1,18 @@
 import Background from "../Background";
 import Container from "../Container";
-import Clothes from "../../clothes";
+import Clothes from "../../clothes.json";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Store } from "../../utils/Store";
+import { ClothesData } from "../../types";
 
 const MainSection = () => {
-  const [search, setSearch] = useState("");
-  const [visible, setVisible] = useState(16);
-  const [data, setData] = useState([]);
+  const [search, setSearch] = useState<string>("");
+  const [visible, setVisible] = useState<number>(16);
+  const [data, setData] = useState<ClothesData[]>([]);
   const { priceTo, dolar } = useContext(Store);
 
   const router = useRouter();
@@ -29,7 +30,7 @@ const MainSection = () => {
     // console.log(product);
   }, [data]);
 
-  const filterCategories = (categories) => {
+  const filterCategories = (categories: string) => {
     if (categories === "Todo") {
       setData(Clothes);
       return;
@@ -58,7 +59,7 @@ const MainSection = () => {
             <ul className="flex flex-col gap-6 text-sm uppercase md:flex-row whitespace-nowrap">
               {allCategories.map((item) => (
                 <li
-                  key={(prev) => prev + 1}
+                  key={item}
                   className="tracking-wide"
                   onClick={() => filterCategories(item)}
                 >

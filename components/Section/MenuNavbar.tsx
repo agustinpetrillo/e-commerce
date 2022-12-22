@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Store } from "../../utils/Store";
 
 const MenuNavbar = () => {
-  const [nav, setNav] = useState(true);
+  const [nav, setNav] = useState<boolean>(true);
   const { setPriceTo } = useContext(Store);
   return (
     <>

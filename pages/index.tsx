@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import { StrictMode } from 'react'
-import MainSection from '../components/Section/MainSection'
+import { NextPage } from "next";
+import Head from "next/head";
+import MainSection from "../components/Section/MainSection";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <div>
       <Head>
@@ -11,9 +11,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <StrictMode>
+      <div>
         <MainSection />
-      </StrictMode>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Home;

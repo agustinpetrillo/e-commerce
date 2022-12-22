@@ -15,11 +15,11 @@ const Cart = () => {
     document.title = "Carrito - E-commerce";
   });
 
-  const removeCart = (item) => {
+  const removeCart = (item: object) => {
     dispatch({ type: "CART_REMOVE_ITEM", payload: item });
   };
 
-  const updateCart = (item, qty) => {
+  const updateCart = (item: object, qty: string) => {
     const quantity = Number(qty);
     dispatch({ type: "CART_ADD_ITEM", payload: { ...item, quantity } });
   };

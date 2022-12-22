@@ -1,6 +1,6 @@
 import Background from "../../components/Background";
 import Container from "../../components/Container";
-import Clothes from "../../clothes";
+import Clothes from "../../clothes.json";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { BiShoppingBag } from "react-icons/bi";
@@ -8,10 +8,11 @@ import { useContext, useState } from "react";
 import { Store } from "../../utils/Store";
 import Link from "next/link";
 import Head from "next/head";
+import { ParsedUrlQuery } from "querystring";
 
 const ProductScreen = () => {
   const { state, dispatch, priceTo, dolar } = useContext(Store);
-  const [size, setSize] = useState(null);
+  const [size, setSize] = useState<string>("");
   const router = useRouter();
   const { slug } = router.query;
 
@@ -30,7 +31,9 @@ const ProductScreen = () => {
   }
 
   const addToCart = () => {
-    const existItem = state.cart.cartItems.find((i) => i.slug === product.slug);
+    const existItem = state.cart.cartItems.find(
+      (i: ParsedUrlQuery) => i.slug === product.slug
+    );
     const quantity = existItem ? existItem.quantity + 1 : 1;
 
     if (product.stock < quantity) {
