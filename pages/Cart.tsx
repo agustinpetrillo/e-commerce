@@ -90,13 +90,17 @@ const Cart = () => {
                   <p className="text-sm">
                     Cantidad total:
                     <span className="ml-1 text-xl">
-                      {cartItems.reduce((a, c) => a + c.quantity, 0)}
+                      {cartItems.reduce((a: number, c) => a + c.quantity, 0)}
                     </span>
                   </p>
                   <p className="text-sm">
                     Precio total:
                     <span className="ml-1 text-xl">
-                      ${cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
+                      $
+                      {cartItems.reduce(
+                        (a: number, c) => a + c.quantity * c.price,
+                        0
+                      )}
                     </span>
                   </p>
                   <button className="p-3 mt-2 text-black transition-all duration-200 bg-white rounded-lg hover:scale-105">
