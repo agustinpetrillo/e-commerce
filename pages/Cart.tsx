@@ -42,7 +42,7 @@ const Cart = () => {
             ) : (
               <div className="flex flex-col items-center">
                 <div className="grid grid-cols-4 gap-5">
-                  {cartItems.map((item) => (
+                  {cartItems.map((item: any) => (
                     <div className="flex flex-col items-center" key={item.id}>
                       <Image
                         src={item.image}
@@ -90,7 +90,10 @@ const Cart = () => {
                   <p className="text-sm">
                     Cantidad total:
                     <span className="ml-1 text-xl">
-                      {cartItems.reduce((a: number, c) => a + c.quantity, 0)}
+                      {cartItems.reduce(
+                        (a: number, c: any) => a + c.quantity,
+                        0
+                      )}
                     </span>
                   </p>
                   <p className="text-sm">
@@ -98,7 +101,7 @@ const Cart = () => {
                     <span className="ml-1 text-xl">
                       $
                       {cartItems.reduce(
-                        (a: number, c) => a + c.quantity * c.price,
+                        (a: number, c: any) => a + c.quantity * c.price,
                         0
                       )}
                     </span>

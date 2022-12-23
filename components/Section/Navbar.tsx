@@ -12,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setCartItemsCount(
-      cart.cartItems.reduce((a: number, c) => a + c.quantity, 0)
+      cart.cartItems.reduce((a: number, c: any) => a + c.quantity, 0)
     );
   }, [cart.cartItems]);
 
